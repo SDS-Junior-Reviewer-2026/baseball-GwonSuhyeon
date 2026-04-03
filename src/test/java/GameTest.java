@@ -3,7 +3,16 @@ import org.junit.jupiter.api.Test;
 
 public class GameTest {
     @Test
-    public void test() {
-        assertEquals(1, 1);
+    void createGame(){
+        Game game = new Game();
+        assertNotNull(game);
+    }
+
+    @Test
+    void throwExceptionWhenInputIsNull(){
+        assertThrows(IllegalArgumentException.class, () -> {
+            Game game = new Game();
+            game.guess(null);
+        });
     }
 }
