@@ -30,6 +30,6 @@ public class GameTest {
         assertIllegalArgument(null);
         assertIllegalArgument("12");
         assertIllegalArgument("1234");
-
+        assertIllegalArgument("12s");
     }
 }
